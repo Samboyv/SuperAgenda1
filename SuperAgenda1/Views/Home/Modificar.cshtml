@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="container">
+    <form method="Post" action="/Home/Modificar" class="Form-horizontal">
+        <input type="hidden" name="Id" Id="Id" value="@Model.Id" />
+        <div class="form-group">
+            <label class="col-2">Nombres</label>
+            <div class="col-lg-4">
+                <input type="text" name="Nombres" class="form-control" value="@Model.Nombres" />
+            </div>
+            <label class="col-2">Apellidos</label>
+            <div class="col-lg-4">
+                <input type="text" name="Apellidos" class="form-control" value="@Model.Apellidos" />
+            </div>
+            <label class="col-2">FechaNacimiento</label>
+            <div class="col-lg-4">
+                <input type="text" name="FechaNacimiento" class="form-control" value="@Model.FechaNacimiento" />
+            </div>
+            <label class="col-2">Movil</label>
+            <div class="col-lg-4">
+                <input type="text" name="TelefonoMovil" class="form-control" value="@Model.TelefonoMovil" />
+            </div>
+        </div>
+        <input type="submit" name="btn-enviar" id="btn-enviar" value="Guardar Contactos" />
+    </form>
+</div>

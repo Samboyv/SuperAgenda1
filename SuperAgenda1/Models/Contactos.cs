@@ -11,12 +11,16 @@ namespace SuperAgenda1.Models
     public class Contactos
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
+        public int Id { get; set; }
+
         [Required]
         public string Nombres { get; set; }
         [Required]
         public string Apellidos { get; set; }
         [Required, MaxLength(14)]
         public string TelefonoMovil { get; set; }
+        [Required, MaxLength(14)]
         public string TelefonoCasa { get; set; }
         public string TelefonoTrabajo { get; set; }
         public string Empresa { get; set; }
