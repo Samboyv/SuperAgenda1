@@ -7,7 +7,7 @@
 
 
 <div class="container">
-    <form method="Post" action="/Home/Agregar" class="Form-horizontal">
+    <form method="post" action="/Home/Agregar" class="Form-horizontal">
         <div class="form-group">
             <label class="col-2">Nombres</label>
             <div class="col-lg-4">
@@ -15,17 +15,17 @@
             </div>
             <label class="col-2">Apellidos</label>
             <div class="col-lg-4">
-                <input type="text" name="Apellidos" class="form-control" />
+                <input type="text" name="Apellidos" class="form-control"/>
             </div>
             <label class="col-2">FechaNacimiento</label>
             <div class="col-lg-4">
-                <input type="text" name="FechaNacimiento" class="form-control" />
+                <input type="text" name="FechaNacimiento" class="form-control"/>
             </div>
-            <label class="col-2">Movil</label>
+            <label class="col-2">TelefonoMovil</label>
             <div class="col-lg-4">
-                <input type="text" name="TelefonoMovil" class="form-control" />
+                <input type="text" name="TelefonoMovil" class="form-control"/>
             </div>
         </div>
-        <input type="submit" name="btn-enviar" id="btn-enviar" value="Guardar Contactos" />
+        <button type="submit" class="btn btn-success"> Guardar contacto </button>
     </form>
 </div>
