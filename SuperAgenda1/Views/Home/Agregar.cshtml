@@ -1,31 +1,20 @@
 ﻿@model SuperAgenda1.Models.Contactos
-@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+@{ }
 
 
-<div class="container">
-    <form method="Post" action="/Home/Agregar" class="Form-horizontal">
-        <div class="form-group">
-            <label class="col-2">Nombres</label>
-            <div class="col-lg-4">
-                <input type="text" name="Nombres" class="form-control"/>
-            </div>
-            <label class="col-2">Apellidos</label>
-            <div class="col-lg-4">
-                <input type="text" name="Apellidos" class="form-control"/>
-            </div>
-            <label class="col-2">FechaNacimiento</label>
-            <div class="col-lg-4">
-                <input type="text" name="FechaNacimiento" class="form-control"/>
-            </div>
-            <label class="col-2">TelefonoMovil</label>
-            <div class="col-lg-4">
-                <input type="text" name="TelefonoMovil" class="form-control"/>
-            </div>
-        </div>
-        <button type="submit" class="btn btn-success"> Guardar contacto </button>
-    </form>
-</div>
+<a href="/Home" class="btn btn-primary">Volver</a>
+
+<form method="Post" action="/Home/Agregar">
+
+    <strong>Nombre</strong>
+    <input type="text" name="Nombres" class="form-control" placeholder="Ingrese su Nombre">
+
+    <strong>Apellido</strong>
+    <input type="text" name="Apellidos" class="form-control" placeholder="Ingrese su Apellido">
+
+    <strong>Telefono Movil  </strong>
+    <input type="text" name="TelefonoMovil" class="form-control" placeholder="Ingrese su TelefonoMovil">
+
+    <button type="submit" class="btn btn-success"> Guardar contacto </button>
+
+</form>

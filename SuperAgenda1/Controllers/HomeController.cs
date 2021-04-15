@@ -26,13 +26,6 @@ namespace SuperAgenda1.Controllers
             return View(contactos);
         }
 
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-
         public IActionResult Agregar()
         {
             return View();
@@ -48,7 +41,6 @@ namespace SuperAgenda1.Controllers
 
                 return RedirectToAction("Index");
             }
-
             return View(input);
         }
 
@@ -56,7 +48,6 @@ namespace SuperAgenda1.Controllers
         {
             var output = _db.Contactos.Find(id);
             return View(output);
-
         }
 
         [HttpPost]
@@ -67,8 +58,8 @@ namespace SuperAgenda1.Controllers
                 _db.Entry(input).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
                 _db.SaveChanges();
                 return RedirectToAction("Index");
-            }
 
+            }
             return View(input);
         }
 
@@ -79,24 +70,23 @@ namespace SuperAgenda1.Controllers
         }
 
         public IActionResult Eliminar(int id)
-            {
-                var output = _db.Contactos.Find(id);
-                return View(output);
-            }
-
-            [HttpPost]
-            public IActionResult Eliminar(Contactos input)
-            {
-                if (ModelState.IsValid)
-                {
-                    _db.Entry(input).State = Microsoft.EntityFrameworkCore.EntityState.Deleted;
-                    _db.SaveChanges();
-                    return RedirectToAction("Index");
-                }
-
-                return View(input);
-
-
-            }
+        {
+            var output = _db.Contactos.Find(id);
+            return View(output);
         }
+
+        [HttpPost]
+        public IActionResult Eliminar(Contactos input)
+        {
+            _db.Entry(input).State = Microsoft.EntityFrameworkCore.EntityState.Deleted;
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+    }
 }

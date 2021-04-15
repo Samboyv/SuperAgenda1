@@ -1,12 +1,10 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@model SuperAgenda1.Models.Contactos
+@{ 
 }
 
 <div class="container">
     <form method="Post" action="/Home/Modificar" class="Form-horizontal">
-        <input type="hidden" name="Id" Id="Id" value="@Model.Id" />
+        <input type="hidden" name="Id" id="Id" value="@Model.Id" />
         <div class="form-group">
             <label class="col-2">Nombres</label>
             <div class="col-lg-4">
@@ -25,6 +23,6 @@
                 <input type="text" name="TelefonoMovil" class="form-control" value="@Model.TelefonoMovil" />
             </div>
         </div>
-        <input type="submit" name="btn-enviar" id="btn-enviar" value="Guardar Contactos" />
+        <button type="submit" class="btn btn-success"> Guardar contacto </button>
     </form>
 </div>

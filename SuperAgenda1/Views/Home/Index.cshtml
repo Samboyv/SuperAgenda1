@@ -12,7 +12,6 @@
         <tr>
             <th>Nombres</th>
             <th>Apellidos</th>
-            <th>Fecha de Nacimiento</th>
             <th>TelefonoMovil</th>
 
         </tr>
@@ -23,14 +22,13 @@
         <tr>
             <td>@item.Nombres</td>
             <td>@item.Apellidos</td>
-            <td>@item.FechaNacimiento.ToShortDateString()</td>
             <td>@item.TelefonoMovil</td>
             <td class="text-center">
                 <a href="/Home/Detalle/@item.Id" class="btn btn-secondary">Detalle</a>
                 <a href="/Home/Modificar/@item.Id" class="btn btn-warning">Modificar</a>
                 <a href="/Home/Eliminar/@item.Id" class="btn btn-danger">Eliminar</a>
             </td>
-          </tr>
+        </tr>
         }
     </tbody>
 </table>
