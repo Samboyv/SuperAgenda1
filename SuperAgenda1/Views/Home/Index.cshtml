@@ -10,6 +10,7 @@
 <table class="table table-bordered table-striped">
     <thead>
         <tr>
+            <th>Tipo</th>
             <th>Nombres</th>
             <th>Apellidos</th>
             <th>TelefonoMovil</th>
@@ -21,6 +22,7 @@
         @foreach (var item in Model) 
         {
         <tr>
+            <td>@item.TipoContacto</td>
             <td>@item.Nombres</td>
             <td>@item.Apellidos</td>
             <td>@item.TelefonoMovil</td>

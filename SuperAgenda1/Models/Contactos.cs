@@ -33,7 +33,7 @@ namespace SuperAgenda1.Models
         public string PaginaWeb { get; set; }
         public string PuestoTrabajo { get; set; }
         public Byte[] Foto { get; set; }
-
+        public TipoContacto TipoContacto { get; set; }
 
     }
 }

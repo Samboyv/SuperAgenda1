@@ -1,6 +1,5 @@
 ﻿@model SuperAgenda1.Models.Contactos
-@{ 
-}
+@{ }
 
 <div class="container">
     <form method="Post" action="/Home/Modificar" class="Form-horizontal">
@@ -16,13 +15,20 @@
             </div>
             <label class="col-2">TelefonoCasa</label>
             <div class="col-lg-4">
-                <input type="text" name="FechaNacimiento" class="form-control" value="@Model.TelefonoCasa" />
+                <input type="text" name="TelefonoCasa" class="form-control" value="@Model.TelefonoCasa" />
             </div>
             <label class="col-2">Movil</label>
             <div class="col-lg-4">
                 <input type="text" name="TelefonoMovil" class="form-control" value="@Model.TelefonoMovil" />
             </div>
         </div>
+        <div class="form-group">
+            <label class="col-2">Tipo De Contacto</label>
+            <div class="col-4">
+                @Html.DropDownListFor(a => a.TipoContacto, Html.GetEnumSelectList<SuperAgenda1.Models.TipoContacto>(), new { @class = "form-control" })
+            </div>
+        </div>
         <button type="submit" class="btn btn-success"> Guardar contacto </button>
+
     </form>
 </div>

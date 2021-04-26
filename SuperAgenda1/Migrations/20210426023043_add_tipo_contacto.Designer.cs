@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SuperAgenda1.Models;
 
 namespace SuperAgenda1.Migrations
 {
     [DbContext(typeof(dbContactosContext))]
-    partial class dbContactosContextModelSnapshot : ModelSnapshot
+    [Migration("20210426023043_add_tipo_contacto")]
+    partial class add_tipo_contacto
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
