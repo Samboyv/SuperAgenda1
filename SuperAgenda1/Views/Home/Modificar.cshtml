@@ -3,23 +3,23 @@
 
 <div class="container">
     <form method="Post" action="/Home/Modificar" class="Form-horizontal">
-        <input type="hidden" name="Id" id="Id" value="@Model.Id" />
+        @Html.HiddenFor(obj => obj.Id)
         <div class="form-group">
-            <label class="col-2">Nombres</label>
+            @Html.LabelFor(a => a.Nombres, new { @class = "col-2" })
             <div class="col-lg-4">
-                <input type="text" name="Nombres" class="form-control" value="@Model.Nombres" />
+                @Html.TextBoxFor(a => a.Nombres, new { @class = "form-control" })
             </div>
-            <label class="col-2">Apellidos</label>
+            @Html.LabelFor(a => a.Apellidos, new { @class = "col-2" })
             <div class="col-lg-4">
-                <input type="text" name="Apellidos" class="form-control" value="@Model.Apellidos" />
+                @Html.TextBoxFor(a => a.Apellidos, new { @class = "form-control" })
             </div>
-            <label class="col-2">TelefonoCasa</label>
+            @Html.LabelFor(a => a.TelefonoCasa, new { @class = "col-2" })
             <div class="col-lg-4">
-                <input type="text" name="TelefonoCasa" class="form-control" value="@Model.TelefonoCasa" />
+                @Html.TextBoxFor(a => a.TelefonoCasa, new { @class = "form-control" })
             </div>
-            <label class="col-2">Movil</label>
+            @Html.LabelFor(a => a.TelefonoMovil, new { @class = "col-2" })
             <div class="col-lg-4">
-                <input type="text" name="TelefonoMovil" class="form-control" value="@Model.TelefonoMovil" />
+                @Html.TextBoxFor(a => a.TelefonoMovil, new { @class = "form-control" })
             </div>
         </div>
         <div class="form-group">
