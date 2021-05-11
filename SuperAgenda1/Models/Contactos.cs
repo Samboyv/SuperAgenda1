@@ -18,9 +18,9 @@ namespace SuperAgenda1.Models
         public string Nombres { get; set; }
         [Required]
         public string Apellidos { get; set; }
-        [Required, MaxLength(14)]
+        [Required, MaxLength(14), Display (Name = "Telefono Móvil")]
         public string TelefonoMovil { get; set; }
-        [Required, MaxLength(14)]
+        [Required, MaxLength(14), Display(Name = "Telefono Casa")]
         public string TelefonoCasa { get; set; }
         public string TelefonoTrabajo { get; set; }
         public string Empresa { get; set; }
